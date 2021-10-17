@@ -2,10 +2,10 @@ package com.socketforpy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -19,8 +19,11 @@ public class newSocket extends AppCompatActivity {
     Socket sc = null;
     String ip = "127.0.0.1";
     int socketPort = 1234, streamPort = 1234;
+
+    //set a TextView to show messages from the server
     private TextView msgList;
     private static int linesOfMsg = 0;
+
     public static float r1 = 0, r2 = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,6 +118,7 @@ public class newSocket extends AppCompatActivity {
      and try to show the data on the screen by the message list
      * */
     class DataReceiveThread extends Thread {
+        @SuppressLint("SetTextI18n")
         @Override
         public void run(){
             while (true) {

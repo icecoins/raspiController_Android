@@ -12,16 +12,18 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.RelativeLayout;
 
-public class CustomLayout extends RelativeLayout implements Runnable{ //继承RelativeLayout 实现Runnable接口
 
-    private final Paint p;
+//extends relativelayout to implement runnable interface
+public class CustomLayout extends RelativeLayout implements Runnable{
+
+    private final Paint paint;
     private final Circle circle =new Circle();//joystick
     private final Circle circle2 =new Circle();
 
     @SuppressLint("ClickableViewAccessibility")
     public CustomLayout(Context context) {
         super(context);
-        p=new Paint();
+        paint =new Paint();
         WebView wbv = new WebView(context);
         //set OnTouchListener return true to disabled the click event
         wbv.setOnTouchListener((v, event) -> true);
@@ -82,8 +84,8 @@ public class CustomLayout extends RelativeLayout implements Runnable{ //继承Re
         circle2.setOffsetXY2();
         //redraw the circles with layout
         //and the flag show which circle it is
-        circle.onDraw(g,p, 1);
-        circle2.onDraw(g,p, 2);
+        circle.onDraw(g, paint, 1);
+        circle2.onDraw(g, paint, 2);
     }
     /**
      redraw per 20ms

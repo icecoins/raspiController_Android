@@ -8,7 +8,7 @@ import android.graphics.RectF;
  This class is used as a global variable
  * */
 public class GlobalInformation {
-    //Width and height of the screen
+    //width and height of the screen
     public static int width, height;
 
     public static int streamPort;
