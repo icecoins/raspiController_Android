@@ -89,7 +89,7 @@ public class newSocket extends AppCompatActivity {
     }
 
     /**
-     this thread will always try to confirm the socket connection's survival per 1.5 seconds,
+     this thread will always try to check the socket connection's survival per 1.5 seconds,
      and try to reconnect it if it has been down.
      * */
     class ConnectionMaintenanceThread extends Thread{
@@ -115,8 +115,8 @@ public class newSocket extends AppCompatActivity {
     }
 
     /**
-     this thread will always try to get data from the server,
-     and try to show the data on the screen by the message list
+     this thread will always try to get some data from the server,
+     and show it on the screen through the message list
      * */
     class DataReceiveThread extends Thread {
         @SuppressLint("SetTextI18n")
