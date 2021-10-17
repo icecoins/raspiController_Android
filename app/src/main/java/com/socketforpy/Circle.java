@@ -37,7 +37,7 @@ public class Circle {
         //Multiply by scale to fit different screen sizes
         r1 = 480 * 0.4f * GlobalInformation.ratio;
         r2 = 300 * 0.3f * GlobalInformation.ratio;
-        //Initialize joystick picture
+        //initialize joystick picture
         circle1 = BitmapFactory.decodeResource(GlobalInformation.main.getResources(), R.mipmap.background);
         circle2 = BitmapFactory.decodeResource(GlobalInformation.main.getResources(), R.mipmap.top);
     }
