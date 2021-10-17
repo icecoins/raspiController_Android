@@ -9,6 +9,7 @@ import android.graphics.Paint;
  Circle class
  * */
 public class Circle {
+
     //Coordinates of the large circle when pressed
     private float x1, y1;
 

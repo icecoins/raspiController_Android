@@ -6,11 +6,10 @@ import android.view.MotionEvent;
 import android.view.View;
 
 /**
- rewrite OnTouchListener and it is responsible
-  for monitoring the gestures of the mobile joystick
+ rewrite OnTouchListener and it is responsible for monitoring the gestures of the mobile joystick
  * */
 public class OnTouchMove extends View implements View.OnTouchListener{
-    private com.socketforpy.Circle circle;
+    private final com.socketforpy.Circle circle;
     public OnTouchMove(Context context, com.socketforpy.Circle circle) {
         super(context);
         this.circle = circle;

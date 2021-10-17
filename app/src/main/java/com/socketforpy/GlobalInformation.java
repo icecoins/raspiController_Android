@@ -6,6 +6,7 @@ import android.graphics.RectF;
 
 /**
  This class is used as a global variable
+
  * */
 public class GlobalInformation {
     //width and height of the screen

@@ -60,6 +60,7 @@ public class newSocket extends AppCompatActivity {
         //set the ip in global information
         GlobalInformation.IP = ip;
         GlobalInformation.streamPort = streamPort;
+
         //start three threads below
         new ConnectionMaintenanceThread().start();
         new DataSendThread().start();
