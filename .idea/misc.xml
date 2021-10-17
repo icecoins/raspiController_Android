@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/user/Desktop/SocketForPy/app/src/main/res/drawable/blackcir.xml" value="0.18" />
+        <entry key="..\:/Users/user/Desktop/SocketForPy/app/src/main/res/drawable/bluecir.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/user/Desktop/SocketForPy/app/src/main/res/drawable/circle.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/user/Desktop/SocketForPy/app/src/main/res/drawable/graycir.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/user/Desktop/SocketForPy/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/user/Desktop/SocketForPy/app/src/main/res/drawable/pinkcir.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/user/Desktop/SocketForPy/app/src/main/res/drawable/rand.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/user/Desktop/SocketForPy/app/src/main/res/drawable/redcir.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/user/Desktop/SocketForPy/app/src/main/res/drawable/whitecir.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/user/Desktop/SocketForPy/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/user/Desktop/SocketForPy/app/src/main/res/layout/activity_mjpg.xml" value="0.190625" />
+        <entry key="..\:/Users/user/Desktop/SocketForPy/app/src/main/res/layout/activity_new_socket.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/user/Desktop/SocketForPy/app/src/main/res/layout/activity_soc.xml" value="0.1331081081081081" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
