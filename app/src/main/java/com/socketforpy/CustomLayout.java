@@ -8,7 +8,6 @@ import android.graphics.Paint;
 import android.webkit.WebView;
 import android.widget.RelativeLayout;
 
-
 //extends relativelayout to implement runnable interface
 public class CustomLayout extends RelativeLayout implements Runnable{
 
