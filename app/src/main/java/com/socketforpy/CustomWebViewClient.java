@@ -5,7 +5,6 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-
 public class CustomWebViewClient extends WebViewClient {
     //prevent overwriting successfully loaded pages
     private int onLoadResourceCount = 0;

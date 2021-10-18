@@ -3,8 +3,6 @@ package com.socketforpy;
 import android.graphics.RectF;
 import androidx.appcompat.app.AppCompatActivity;
 
-
-
 /**
  This class is used as a global variable
 

@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.view.MotionEvent;
 import android.view.View;
 
-
 /**
  rewrite OnTouchListener and it is responsible for monitoring the gestures of the mobile joystick
  * */
