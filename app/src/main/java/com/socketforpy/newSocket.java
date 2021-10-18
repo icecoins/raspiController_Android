@@ -29,7 +29,6 @@ public class newSocket extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_socket);
-        Objects.requireNonNull(getSupportActionBar()).hide();
         tools.setFullscreen(this);
 
         //use a TextView to show the message from the server
@@ -45,7 +44,6 @@ public class newSocket extends AppCompatActivity {
         GlobalInformation.engineRight1 = 0;
         GlobalInformation.engineLeft2 = 0;
         GlobalInformation.engineRight2 = 0;
-
         //try to get the ip(String) and ports(int) from previous activity
         if(!getIntent().getStringExtra("IP").equals("")){
             ip = getIntent().getStringExtra("IP");

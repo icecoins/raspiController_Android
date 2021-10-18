@@ -6,6 +6,10 @@ import android.os.Looper;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Objects;
+
 public class tools {
     private static Toast t1;
     /**
@@ -40,9 +44,12 @@ public class tools {
     /**
      set the activity to be fullscreen
      * */
-    public static void setFullscreen(Activity activity) {
+    public static void setFullscreen(AppCompatActivity activity) {
+        //hide ActionBar
+        Objects.requireNonNull(activity.getSupportActionBar()).hide();
+        //set to be full screen
         activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);//全屏 隐藏状态栏
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
 }

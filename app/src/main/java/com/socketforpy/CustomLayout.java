@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.util.Log;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
@@ -19,7 +20,6 @@ public class CustomLayout extends RelativeLayout implements Runnable{
     private final Paint paint;
     private final Circle circle =new Circle();//joystick
     private final Circle circle2 =new Circle();
-
     @SuppressLint("ClickableViewAccessibility")
     public CustomLayout(Context context) {
         super(context);
@@ -31,21 +31,12 @@ public class CustomLayout extends RelativeLayout implements Runnable{
         //setAllowFileAccess as true to access local files (index.html)
         wbv.getSettings().setAllowFileAccess(true);
 
+        //Override the functions in WebViewClient to reach custom html page
+        wbv.setWebViewClient(new CustomWebViewClient());
+
         //try to load the video stream url
         wbv.loadUrl("http://" + GlobalInformation.IP +":"+ GlobalInformation.streamPort +"/?action=stream");
-
-        //Override the functions in WebViewClient to reach custom html page
-        wbv.setWebViewClient(new WebViewClient(){
-            @Override
-            public void onReceivedHttpError(WebView view, WebResourceRequest request, WebResourceResponse errorResponse) {
-                view.loadUrl("file:///android_asset/index.html");
-            }
-
-            @Override
-            public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
-                view.loadUrl("file:///android_asset/index.html");
-            }
-        });
+        //wbv.loadUrl("https://baidu.com");
 
         //add webview to custom layout
         addView(wbv);

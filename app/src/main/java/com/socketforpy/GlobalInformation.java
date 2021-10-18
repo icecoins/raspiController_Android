@@ -3,6 +3,8 @@ package com.socketforpy;
 import android.app.Activity;
 import android.graphics.RectF;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 
 /**
  This class is used as a global variable
@@ -22,7 +24,7 @@ public class GlobalInformation {
     public static float ratio, offsetX, offsetY, offsetX2, offsetY2, R = 144.2f;
 
     //Record the activity of the main work
-    public static Activity main;
+    public static AppCompatActivity main;
 
     //joystick touchable area
     public static RectF rect =new RectF();

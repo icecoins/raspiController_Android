@@ -12,9 +12,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //hide the ActionBar
-        Objects.requireNonNull(getSupportActionBar()).hide();
-
         //set the app to be fullscreen
         tools.setFullscreen(this);
 
