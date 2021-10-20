@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         //set an OnClickListener to response the click
         findViewById(R.id.jmp).setOnClickListener(v->{
-            //show some message
+            //show some messages
             tools.showMsg(this, "Try to open the video stream address.");
 
             //use an intent to goto next activity, together with some values
