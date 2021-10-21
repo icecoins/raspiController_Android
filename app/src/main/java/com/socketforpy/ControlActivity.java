@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-public class newSocket extends AppCompatActivity {
+public class ControlActivity extends AppCompatActivity {
     Socket sc = null;
     String ip = "127.0.0.1";
     int socketPort = 1234, streamPort = 1234;
@@ -26,7 +26,7 @@ public class newSocket extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_socket);
-        tools.setFullscreen(this);
+        Tools.setFullscreen(this);
 
         //use a TextView to show the message from the server
         msgList = new TextView(this);

@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Objects;
 
-public class tools {
+public class Tools {
     private static Toast t1;
     /**
      show some message on any activity

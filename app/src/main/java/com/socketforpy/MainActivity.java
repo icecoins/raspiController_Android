@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //set the app to be fullscreen
-        tools.setFullscreen(this);
+        Tools.setFullscreen(this);
 
         //get EditText to reach values of ip and ports
         EditText ip = findViewById(R.id.getIP),
@@ -22,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
         //set an OnClickListener to response the click
         findViewById(R.id.jmp).setOnClickListener(v->{
             //show some messages
-            tools.showMsg(this, "Try to open the video stream address.");
+            Tools.showMsg(this, "Try to open the video stream address.");
 
             //use an intent to goto next activity, together with some values
-            Intent it = new Intent(MainActivity.this, newSocket.class);
+            Intent it = new Intent(MainActivity.this, ControlActivity.class);
             it.putExtra("IP", ip.getText().toString());
             it.putExtra("SOCKETPORT", socketPort.getText().toString());
             it.putExtra("STREAMPORT",streamPort.getText().toString());

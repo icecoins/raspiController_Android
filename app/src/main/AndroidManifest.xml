@@ -17,7 +17,7 @@
         android:theme="@style/Theme.SocketForPy"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".newSocket"
+            android:name=".ControlActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="landscape"
             android:exported="true" />
