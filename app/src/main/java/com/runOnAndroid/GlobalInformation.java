@@ -1,4 +1,4 @@
-package com.socketforpy;
+package com.runOnAndroid;
 
 import android.graphics.RectF;
 import androidx.appcompat.app.AppCompatActivity;

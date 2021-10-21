@@ -1,6 +1,5 @@
-package com.socketforpy;
+package com.runOnAndroid;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Looper;
 import android.view.WindowManager;

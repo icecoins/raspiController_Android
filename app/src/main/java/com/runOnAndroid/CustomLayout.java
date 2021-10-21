@@ -1,4 +1,4 @@
-package com.socketforpy;
+package com.runOnAndroid;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

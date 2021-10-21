@@ -1,4 +1,4 @@
-package com.socketforpy;
+package com.runOnAndroid;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -9,8 +9,8 @@ import android.view.View;
  rewrite OnTouchListener and it is responsible for monitoring the gestures of the mobile joystick
  * */
 public class OnTouchMove extends View implements View.OnTouchListener{
-    private final com.socketforpy.Circle circle;
-    public OnTouchMove(Context context, com.socketforpy.Circle circle) {
+    private final com.runOnAndroid.Circle circle;
+    public OnTouchMove(Context context, com.runOnAndroid.Circle circle) {
         super(context);
         this.circle = circle;
 
