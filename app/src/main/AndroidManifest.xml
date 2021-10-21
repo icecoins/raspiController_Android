@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SocketForPy"
+        android:theme="@style/Theme.runOnAndroid"
         android:usesCleartextTraffic="true">
         <activity
             android:name="com.runOnAndroid.ControlActivity"
