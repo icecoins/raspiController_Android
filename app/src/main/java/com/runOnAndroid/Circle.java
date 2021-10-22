@@ -39,8 +39,8 @@ public class Circle {
         r1 = 480 * 0.4f * GlobalInformation.ratio;
         r2 = 300 * 0.3f * GlobalInformation.ratio;
         //initialize joystick picture
-        circle1 = BitmapFactory.decodeResource(GlobalInformation.main.getResources(), R.mipmap.background);
-        circle2 = BitmapFactory.decodeResource(GlobalInformation.main.getResources(), R.mipmap.top);
+        circle1 = BitmapFactory.decodeResource(GlobalInformation.main.getResources(), R.mipmap.button_background);
+        circle2 = BitmapFactory.decodeResource(GlobalInformation.main.getResources(), R.mipmap.button_top);
     }
     /**
      Operation after rocker is pressed

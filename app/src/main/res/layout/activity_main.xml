@@ -70,7 +70,7 @@
         android:layout_height="150dp"
         android:layout_marginStart="110dp"
         android:layout_marginTop="480dp"
-        android:background="@drawable/rand"
+        android:background="@drawable/rand_circle"
         android:text="RUN"
         android:textColor="@color/blue"
         android:textSize="35sp" />

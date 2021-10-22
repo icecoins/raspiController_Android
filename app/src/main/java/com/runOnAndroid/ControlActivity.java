@@ -26,7 +26,6 @@ public class ControlActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_socket);
-        Tools.setFullscreen(this);
 
         //use a TextView to show the message from the server
         msgList = new TextView(this);
@@ -79,6 +78,9 @@ public class ControlActivity extends AppCompatActivity {
         //set the text and color of the message list
         msgList.setText("");
         msgList.setTextColor(Color.RED);
+
+        //set the app to be fullscreen
+        Tools.setFullscreen(this);
         //set the content view as CustomLayout
         setContentView(layout);
     }
