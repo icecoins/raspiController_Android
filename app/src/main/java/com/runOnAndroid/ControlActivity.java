@@ -5,12 +5,17 @@ import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.TimeUtils;
 import android.widget.TextView;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Timer;
 
 public class ControlActivity extends AppCompatActivity {
     Socket sc = null;
@@ -18,7 +23,7 @@ public class ControlActivity extends AppCompatActivity {
     int socketPort = 1234, streamPort = 1234;
 
     //set a TextView to show messages from the server
-    private TextView msgList;
+    private static TextView msgList;
     private static int linesOfMsg = 0;
 
     public static float r1 = 0, r2 = 0;
@@ -71,13 +76,15 @@ public class ControlActivity extends AppCompatActivity {
         //get a CustomLayout
         CustomLayout layout = new CustomLayout(this);
         //add the message list to the CustomLayout with definite width and height
-        layout.addView(msgList, GlobalInformation.width /6, GlobalInformation.height /6);
+        layout.addView(msgList, GlobalInformation.width /2, GlobalInformation.height /6);
         //set the location of the message list
-        msgList.setX(GlobalInformation.width /1.2f);
-        msgList.setY(0);
+        msgList.setX(GlobalInformation.width / 1.5f);
+        msgList.setY(50);
         //set the text and color of the message list
         msgList.setText("");
-        msgList.setTextColor(Color.RED);
+        msgList.setTextColor(Color.WHITE);
+        msgList.setTextSize(17);
+        msgList.setAlpha(0.3f);
 
         //set the app to be fullscreen
         Tools.setFullscreen(this);
@@ -86,14 +93,35 @@ public class ControlActivity extends AppCompatActivity {
     }
 
     /**
+     * try to add a message to the messageList
+     * the messageList will be emptied per 3 lines
+     * */
+    public void addMessage(String msg){
+        runOnUiThread(()->{
+            //set the max lines of the sentences as 3
+            if(linesOfMsg >= 3){
+                msgList.setText(msg + "\n");
+                linesOfMsg = 1;
+            }else{
+                msgList.append(msg + "\n");
+                ++linesOfMsg;
+            }
+        });
+    }
+
+    /**
      this thread will always try to check the socket connection's survival per 1.5 seconds,
      and try to reconnect it if it has been down.
      * */
     class ConnectionMaintenanceThread extends Thread{
+        @SuppressLint({"SimpleDateFormat", "SetTextI18n"})
         @Override
         public void run(){
             while (true){
                 if(sc == null){
+                    addMessage("Disconnect from server at " +
+                            new SimpleDateFormat("HH:mm:ss")
+                                    .format(Calendar.getInstance().getTime()));
                     try {
                         sc = new Socket(ip, socketPort);
                     } catch (IOException e) {
@@ -101,6 +129,8 @@ public class ControlActivity extends AppCompatActivity {
                     }
                 }
                 else{
+                    addMessage("Connected to server at" + new SimpleDateFormat("HH:mm:ss")
+                            .format(Calendar.getInstance().getTime()) + "\n");
                     try {
                         Thread.sleep(1500);
                     } catch (InterruptedException e) {
@@ -131,16 +161,7 @@ public class ControlActivity extends AppCompatActivity {
                                 //Log.e("msg>>: ", s);
                                 String finalS = s;
                                 //to change the ui in a child thread must call the function of runOnUiThread
-                                runOnUiThread(()->{
-                                    //set the max lines of the sentences as 3
-                                    if(linesOfMsg >= 2){
-                                        msgList.setText(finalS + "\n");
-                                        linesOfMsg = 0;
-                                    }else{
-                                        msgList.append(finalS + "\n");
-                                        linesOfMsg++;
-                                    }
-                                });
+                                addMessage(finalS);
                             }
                         }
                     }
