@@ -51,7 +51,7 @@ public class Tools {
         //hide ActionBar
         Objects.requireNonNull(activity.getSupportActionBar()).hide();
 
-        //try to expand the layout to the camera area (for notch)
+        //try to expand the layout to the camera area while landscape the screen in the special-shaped screen
         if (activity.getResources().getConfiguration().orientation ==
                 Configuration.ORIENTATION_LANDSCAPE && Build.VERSION.SDK_INT >= 28){
             WindowManager.LayoutParams lp = activity.getWindow().getAttributes();
