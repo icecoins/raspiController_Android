@@ -3,6 +3,8 @@
 
 请先在树莓派中运行runOnRespberrypi.py系列文件，然后再使用此app
 
+https://github.com/woyaogtmdttkp/runOnRaspberryPi
+
 在打开app后填入/修改树莓派ip与将使用的端口，点击run即可跳转到操作页面
 
 通信使用socket，若连接断开，应用将每1.5秒尝试重新建立连接
