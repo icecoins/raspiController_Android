@@ -3,7 +3,7 @@
 
 请先在树莓派中运行runOnRespberrypi.py系列文件，然后再使用此app
 
-https://github.com/woyaogtmdttkp/runOnRaspberryPi
+https://github.com/icecoins/runOnRaspberryPi
 
 在打开app后填入/修改树莓派ip与将使用的端口，点击run即可跳转到操作页面
 
