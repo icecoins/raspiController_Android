@@ -1,4 +1,4 @@
-# runOnAndroid
+# raspiController_Android
 这个app将尝试控制树莓派小车，在使用时需与树莓派在同一wifi下
 
 请先在树莓派中运行runOnRespberrypi.py系列文件，然后再使用此app
